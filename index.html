@@ -313,14 +313,14 @@
        is the personality. The serif runs larger and airier so the whole
        line breathes. */
     .hero-statement {
-      font-family: var(--font-pixel);
-      font-size: clamp(28px, 3.6vw, 46px);
-      line-height: 1.32;
+      font-family: "Space Grotesk", Inter, system-ui, sans-serif;
+      font-size: clamp(30px, 5.2vw, 74px);
+      line-height: clamp(36px, 6.2vw, 90px);
       letter-spacing: -0.02em;
-      font-weight: 700;
+      font-weight: 900;
       color: var(--fg);
-      max-width: 24ch;
-      margin: 0 0 var(--gap-lg);
+      max-width: 28ch;
+      margin: 0 0 var(--gap-md);
     }
     /* Emphasis phrases in the display serif --- set larger to balance the
        smaller pixel glyphs, italic optional via .serif-i. */
@@ -345,7 +345,7 @@
       background-position: 0 0.98em;
       background-size: 100% 2px;
     }
-    .hero .lead.hero-bio, .hero .lead.hero-bio { margin-bottom: var(--gap-lg); max-width: 52ch; color: var(--muted); }
+    .hero .lead.hero-bio, .hero .lead.hero-bio { margin-bottom: var(--gap-lg); max-width: 52ch; color: var(--muted); font-size: clamp(15px, 1.4vw, 18px); line-height: 1.55; }
     /* Real company names inked solid against the muted bio --- proof by name. */
     .hero-bio .ink { color: var(--fg); font-weight: 600; }
     .hero .lead em { font-style: normal; color: var(--accent); font-weight: 600; }
@@ -362,7 +362,7 @@
       display: inline-block;
       width: 1.08em;
       height: 1.08em;
-      vertical-align: -0.26em;
+      vertical-align: -0.22em;
       margin: 0 0.14em;
       border: var(--bw) solid var(--fg);
       background: var(--bg);
@@ -380,8 +380,40 @@
     }
     /* single clean full-colour layer --- no dither, no crossfade. */
     .hero-chip .chip-clean { image-rendering: auto; }
-    @media (max-width: 760px) {
-      .hero-chip { width: 1.3em; height: 1.3em; vertical-align: -0.34em; }
+    @media (max-width: 620px) {
+      .hero { padding-block: clamp(36px, 7vw, 48px); }
+      .hero-statement {
+        font-size: clamp(26px, 7.8vw, 34px);
+        line-height: 1.22;
+        letter-spacing: -0.02em;
+        margin-bottom: 16px;
+        max-width: 100%;
+      }
+      .hero-chip {
+        width: 1.12em;
+        height: 1.12em;
+        vertical-align: -0.2em;
+        margin: 0 0.1em;
+      }
+      .hero .lead.hero-bio {
+        font-size: 15px;
+        line-height: 1.5;
+        margin-bottom: 22px;
+        max-width: 100%;
+      }
+      .hero-cta {
+        display: flex;
+        width: 100%;
+        gap: 10px;
+        margin-top: 4px;
+      }
+      .hero-cta .btn {
+        flex: 1 1 auto;
+        justify-content: center;
+        text-align: center;
+        padding: 10px 14px;
+        font-size: 12px;
+      }
     }
 
     /* --------- scope strip container (meters live in the meter-* rules below) --- */
@@ -763,8 +795,8 @@
       <div class="container">
         <div class="hero-text">
           
-          <h1 class="hero-statement" style="font-size: 74px; font-weight: 900; font-family: &quot;Space Grotesk&quot;, Inter, system-ui, sans-serif; line-height: 90px;">Eu sou o <span class="hero-chip"><img class="chip-clean" src="assets/mario-chip-clean.png" width="320" height="320" alt="Retrato de Mario Kanegae"></span> Mario, lidero <span class="serif serif-i">design de produto</span> <span class="serif">&amp; serviço</span> e os times que <span class="mark">entregam</span> o resultado.</h1>
-          <p class="lead hero-bio" style="font-size: 18px;">Hoje coordeno design, pesquisa e dados na <span class="ink">YDUQS</span>, a maior EdTech do país. Antes, desenhei a jornada de entrega da <span class="ink">Natura</span> e o CMS da assistente virtual do <span class="ink">Itaú</span>. São mais de 6 anos ligando insight de usuário a métrica de negócio, sem largar o protótipo.</p>
+          <h1 class="hero-statement">Eu sou o <span class="hero-chip"><img class="chip-clean" src="assets/mario-chip-clean.png" width="320" height="320" alt="Retrato de Mario Kanegae"></span> Mario, lidero <span class="serif serif-i">design de produto</span> <span class="serif">&amp; serviço</span> e os times que <span class="mark">entregam</span> o resultado.</h1>
+          <p class="lead hero-bio">Hoje coordeno design, pesquisa e dados na <span class="ink">YDUQS</span>, a maior EdTech do país. Antes, desenhei a jornada de entrega da <span class="ink">Natura</span> e o CMS da assistente virtual do <span class="ink">Itaú</span>. São mais de 6 anos ligando insight de usuário a métrica de negócio, sem largar o protótipo.</p>
           <div class="hero-cta">
             <a href="#projetos" class="btn btn-primary">Ver o que liderei</a>
             <a href="#lideranca" class="btn btn-secondary">Como eu lidero</a>
@@ -1106,8 +1138,8 @@
           <p class="lead" style="margin-top: 12px;">Aberto a conversas sobre liderança de design, estratégia de produto e a construção de times de design.</p>
         </div>
         <div class="foot-links">
-          <a class="link-arrow" href="https://www.linkedin.com/marioyks/" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="link-arrow" href="mario.yks@gmail.com" target="_blank" rel="noopener">E-mail</a>
+          <a class="link-arrow" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="link-arrow" href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
         </div>
       </div>
       <p class="foot-note">© Mario Kanegae 2026 · Product &amp; Service Designer</p>
