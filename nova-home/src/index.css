@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --color-canvas: #EEEDE5;
+  --color-surface: #F7F6F2;
+  --color-surface-pure: #FFFFFF;
+  --color-charcoal: #202426;
+  --color-charcoal-secondary: #43494C;
+  --color-charcoal-muted: #6C7377;
+  --color-teal: #167982;
+  --color-teal-dark: #105B62;
+  --color-teal-tint: #E0ECEC;
+  --color-amber-accent: #8B5E1A;
+  --color-amber-tint: #F5EFE2;
+  --color-hairline: #C7C6BD;
+}
+
+@layer base {
+  html {
+    background-color: #EEEDE5;
+    color: #202426;
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  body {
+    background-color: #EEEDE5;
+    color: #202426;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #167982;
+    color: #FFFFFF;
+  }
+}
+
+/* Tipografia técnica vazada para os numerais de capítulo (01 a 09), idêntica ao PDF de referência */
+.chapter-numeral-outline {
+  font-family: var(--font-mono);
+  font-weight: 800;
+  color: transparent;
+  -webkit-text-stroke: 1.75px #202426;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  user-select: none;
+}
+
+.chapter-numeral-outline-teal {
+  font-family: var(--font-mono);
+  font-weight: 800;
+  color: transparent;
+  -webkit-text-stroke: 1.75px #167982;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  user-select: none;
+}
+
+/* Padrão de grade técnica sutil para os slots de artefatos */
+.artifact-blueprint-grid {
+  background-color: #F6F5F0;
+  background-image:
+    linear-gradient(to right, rgba(32, 36, 38, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(32, 36, 38, 0.045) 1px, transparent 1px);
+  background-size: 24px 24px;
+}

@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "Case Nova Home",
+			"path": ".."
+		},
+		{
+			"name": "POC Kiro",
+			"path": "../../../POC Kiro"
+		}
+	],
+	"settings": {
+		"kiroAgent.configureMCP": "Enabled"
+	}
+}

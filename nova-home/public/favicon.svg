@@ -1,0 +1,14 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" rx="6" fill="#167982" />
+  <text
+    x="50%"
+    y="52%"
+    dominant-baseline="central"
+    text-anchor="middle"
+    font-family="'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace"
+    font-size="14"
+    font-weight="800"
+    letter-spacing="-0.5"
+    fill="#EEEDE5"
+  >MK</text>
+</svg>
